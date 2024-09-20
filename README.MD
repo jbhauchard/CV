@@ -1,6 +1,6 @@
 ### CV - Jean-Baptiste Hauchard
 
-Ce dépôt contient une version à jour de mon CV, décrivant mon parcours professionnel en tant qu'ingénieur en systèmes, réseaux et objets connectés, ainsi que mes compétences en IA générative et en gestion de projets.
+Ce dépôt contient une version à jour de mon CV, décrivant mon parcours professionnel en tant qu'ingénieur en systèmes, réseaux et objets connectés, ainsi que mes compétences en prototypage, en IA générative et en gestion de projets.
 
 Vous pouvez télécharger ou consulter mon CV en format PDF via le lien suivant :
 
