@@ -1,0 +1,204 @@
+% !TeX spellcheck = fr_FR
+% !TeX program = pdflatex
+% Author Jean-Baptiste Hauchard.
+
+\documentclass[11pt, a4paper]{article} 
+
+\usepackage[T1]{fontenc}     % We are using pdfLaTeX,
+\usepackage[utf8]{inputenc}  % hence this preparation
+\usepackage[british]{babel}  
+\usepackage[left = 0mm, right = 0mm, top = 0mm, bottom = 0mm]{geometry}
+\usepackage[stretch = 25, shrink = 25, tracking=false, letterspace=30]{microtype}  %% set tracking to false if using lualatex, which is needed for fontawsome
+\usepackage{graphicx}        % To insert pictures
+\usepackage{xcolor}          % To add colour to the document
+\usepackage{marvosym}        % Provides icons for the contact details
+\usepackage{enumitem}        % To redefine spacing in lists
+\setlist{parsep = 0pt, topsep = 0pt, partopsep = 1pt, itemsep = 1pt, leftmargin = 6mm}
+\usepackage{FiraSans}        % Font to be used
+\usepackage{twemojis}		% To add flags
+\usepackage{mathcomp}		% To add symbols
+\usepackage{fontawesome}		% needed for most symbols
+
+%\usepackage{atbegshi}		% http://ctan.org/pkg/atbegshi
+%\AtBeginDocument{\AtBeginShipoutNext{\AtBeginShipoutDiscard}}		% to get rid of first blank page
+
+
+\newfontfamily{\FAFR}{Font Awesome 6 Free Regular}
+\newfontfamily{\FAFS}{Font Awesome 6 Free Solid}
+\newfontfamily{\FAB}{Font Awesome 6 Brands Regular}
+\newfontfamily{\BNP}{BNPP Sans Condensed}
+
+\def\faEmail{{	\FAFR \symbol{"F0E0}}} 	% Email
+\def\faPhone{	\FAFS \symbol{"F095}} 		% Phone
+\def\faLinkedin{	\FAB \symbol{"F08C}} 	% Linkedin
+\def\faGithub{	\FAB \symbol{"F09B}} 		% Github
+\def\faploptest{	\FAFS \symbol{"F19C}} 		% TESTBROKENCHARS
+\def\faHouse{	\FAFR \symbol{"F0F7}} 		% House
+\def\faCar{	\FAFS \symbol{"F5DE}} 		% Car
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\definecolor{bandeau}{HTML}{007348}
+
+%%%%%%% USER COMMAND DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%
+% These are the real workhorses of this template
+\newcommand{\dates}[1]{\hfill\mbox{\textbf{#1}}} % Bold stuff that doesn’t got broken into lines
+\newcommand{\is}{\par\vskip.5ex plus .4ex} % Item spacing
+\newcommand{\smaller}[1]{{\small$\diamond$\ #1}}
+\newcommand{\headleft}[1]{\vspace*{1.5ex}\textsc{\textbf{#1}}\par%
+    \vspace*{-1ex}\hrulefill\par\vspace*{0.7ex}}
+\newcommand{\headright}[1]{\vspace*{2.5ex}\textsc{\Large\color{bandeau}#1}\par%
+     \vspace*{-1ex}{\color{bandeau}\hrulefill}\par}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[colorlinks = true, urlcolor = white, linkcolor = white]{hyperref}
+
+\begin{document}
+
+% Style definitions -- killing the unnecessary space and adding the skips explicitly
+\setlength{\topskip}{0pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\fboxsep}{0pt}
+\pagestyle{empty}
+\raggedbottom
+
+\begin{minipage}[t]{0.4\textwidth} %% Left column -- outer definition
+%  Left column -- top dark rectangle
+\colorbox{bandeau}{\begin{minipage}[t][5.5mm][t]{\textwidth}\null\hfill\null\end{minipage}}
+
+\vspace{-0.4ex} % Eliminates the small gap
+\colorbox{bandeau!100}{\color{white}  %% LEFT BOX
+\kern0.09\textwidth\relax% Left margin provided explicitly
+\begin{minipage}[t][293mm][t]{0.82\textwidth}
+%\raggedright
+\vspace*{2.5ex}
+
+
+% Centering without extra vertical spacing
+\null\hfill\includegraphics[width=0.5\textwidth]{oval-transparent-denoised.png}\hfill\null
+
+\vspace*{3ex} % Space after the picture
+
+
+
+{\BNP\Huge\ Jean-Baptiste \textbf{\textsc{HAUCHARD}} \normalsize}
+\vspace*{-1.5ex}
+
+
+\headleft{\BNP }
+\textbf{Ingénieur en informatique et réseaux} avec une solide expérience en \mbox{\textbf{gestion de projets techniques}}, en développement d'\textbf{objets connectés} et en infrastructures \textbf{cloud}. Passionné par l'\textbf{intelligence artificielle, l'électronique} et les enjeux de \textbf{sécurité}, je combine des compétences techniques variées avec un goût prononcé pour le \textbf{prototypage} et la \textbf{transmission de connaissances}.
+\vspace*{3ex} % Space after the picture
+
+
+
+\headleft{\BNP Contact}
+%\small % To fit more content
+{\faEmail}\ {\ jbhauchard@gmail.com} \\[0.3ex]
+{\faPhone}\ \  +33\,6\,71\,24\,68\,68 \\[0.3ex]
+{\faLinkedin}\ \href{https://www.linkedin.com/in/jbhauchard}{\ linkedin.com/in/jbhauchard} \\[0.3ex]
+{\faGithub}\ \href{https://github.com/jbhauchard/CV}{\ github.com/jbhauchard/CV} \\[0.3ex]
+\normalsize
+\vspace*{1.0ex} % Space after the picture
+
+
+\headleft{\BNP Profil}
+{\faploptest}\ {Ingénieur diplomé} \\[0.3ex]
+{\faCar}\ Permis \textbf{B}\\[0.3ex]
+\twemoji{flag: France}\ \textbf{ Français :} Langue maternelle \\[0.3ex]
+\twemoji{flag: United Kingdom}\ \textbf{ Anglais :} Courant (TOEIC 915) \\[0.3ex]
+\twemoji{flag: Romania}\ \textbf{ Roumain :} Conversationnel\\[0.3ex]
+\twemoji{flag: Spain}\ \textbf{ Espagnol :} Intermédiaire (B2)\\[0.3ex]
+%{\Mundus}\ Nationalité \textbf{Française} \\[0.3ex]
+{\faHouse}\ \ Domicilié en Île-de-France (Ermont)
+\vspace*{3.0ex} % Space after the picture
+
+\headleft{\BNP Hobbies}
+\textbf{\textit{\textbullet\ Making \& Hacking :}} \mbox{Réparation} électronique, CAO (FreeCAD), \mbox{impression} 3D, CNC, Laser, moulage (plâtre/silicone/résine/latex) \\
+\textbf{\textit{\textbullet\ IA générative :}} Stable Diffusion/Flux (ComfyUI), Red Teaming de LLM (ollama) \\
+\textbf{\textit{\textbullet\ Arts graphiques :}} Estampe traditionnelle et contemporaine, photographie alternative (sténopé, cyanotype...), membre \mbox{co-fondateur} d'un collectif\\
+\textbf{\textit{\textbullet\ Lecture :}} SF, Informatique et Sciences
+
+
+
+
+
+\end{minipage}%
+\kern0.09\textwidth\relax%%Right margin provided explicitly to stretch the colourbox
+}
+\end{minipage}% Right column
+\hskip2.5em% Left margin for the white area
+\begin{minipage}[t]{0.5\textwidth}
+\setlength{\parskip}{0.8ex}% Adds spaces between paragraphs; use \\ to add new lines without this space. Shrink this amount to fit more data vertically
+
+\vspace{2ex}
+
+\headright{\BNP Compétences}
+\begin{itemize}
+\item \textbf{Gestion de projets techniques} : \mbox{communication}, rigueur, animation d'équipe, capacité à résoudre des problèmes complexes, fort sens du service et de la satisfaction client
+\item \textbf{Administration systèmes} : GNU/Linux (Debian, Ubuntu), shell {\scriptsize\textit{(top 15\% de Linkedin)}}, MySQL, PostgreSQL, CouchDB
+\item \textbf{Hébergement Web} : Cloud-computing (virtualisation, OVH, GCP), troubleshooting (PHP, Python, ...)
+\item \textbf{Électronique / IoT} : conception, programmation C (\textmu C), RF
+\end{itemize} 
+\vspace*{-2ex} % Space after the picture
+
+
+\headright{\BNP Expériences}
+
+\textbf{\textsc{Product Manager Polyvalent}} \textit{OPCore, Paris.}  \dates{2023--2024} \\
+\smaller{Reprise de la GTB des Datacenters : consolidation du code (Django/PostgreSQL, Ansible), documentation, métriques.}
+
+\is
+\textbf{\textsc{Responsable R\&D}} \textit{ViaDirect} puis \textit{Kardham, Paris.}  \dates{2016--2023} \\
+\smaller{Création d'une offre d'objets connectés "VDBuilding". Gestion d'équipe, avant-vente, recherche et développement (C, Bash, micro-controleurs, impression 3D), industrialisation, SysAdmin/support technique, gestion de projets et suivi des grands comptes.}
+
+\is
+\textbf{\textsc{Conseil email marketing}} \textit{Sendinblue, Paris.}  \dates{2015} \\
+\smaller{Support client, avant-vente. Implémentation d'une \mbox{automatisation} (IA) de pré-qualification commerciale.}
+
+\is
+\textbf{\textsc{Chef de projets}} \textit{NBS System, Paris.}  \dates{2014--2015} \\
+\smaller{Suivi des clients top 30 pour le hosting dédié haute sécurité (PCI-DSS). Avant-vente, gestion de projets, KPI, support technique.}
+
+\is
+\textbf{\textsc{Administrateur Systèmes}} \textit{NBS System, Paris.}  \dates{2012--2013} \\
+\smaller{Maintien d'environnements Cloud (multi-DC) axés sur les \mbox{performances} (GNU/Linux). Déploiement, troubleshooting, gestion de projets techniques, astreintes L1.}
+
+\is
+\textbf{\textsc{Enseignant}} \textit{Éducation nationale, Normandie.} \dates{2010--2011} \\
+\smaller{Enseignant vacataire (contractuel) : Technologie (collège), \mbox{soutien} en Mathématiques et Physique-Chimie (tous niveaux).}
+
+\is
+\textbf{\textsc{Co-fondateur}} \textit{Créa-Sénior, Normandie.} \dates{2009} \\
+\smaller{Création d'une entreprise de VPC de fournitures de loisirs créatifs.}
+
+\is
+\textbf{\textsc{Ingénieur d'affaires}} \textit{INVIVOO, Courbevoie.}  \dates{2008} \\
+\smaller{Recrutement, prospection, négociation et suivi d'affaires dans le secteur IT et grands comptes Finance (LCFR, AXA-IM).}
+
+\is
+\textbf{\textsc{R\&D micro-électronique}} \textit{EEMI, Le Havre.}  \dates{2007--2008} \\
+\smaller{Projet Ingénieur : conception d'un module de surveillance "Fœhn Technologies" pour le transport maritime. Brevet (FR2913787).}
+
+\is
+\textbf{\textsc{Auditeur IT}} \textit{Inspection Académique, Caen.}  \dates{2007} \\
+\smaller{Stage : déploiement OCS-ng + GLPI (Fedora / RedHat) pour \mbox{inventaire} du parc (Windows XP), cartographie, audit des process.}
+
+
+
+\vspace*{-2ex} % Space after the picture
+
+\headright{\BNP Éducation}
+
+\textbf{\textsc{Ingénieur en Informatique et Réseaux.}} \textit{ESIGELEC.} \dates{2005--2008} \\
+\smaller{Formation complète en ingénierie informatique et réseaux.}
+
+\is
+\textbf{\textsc{Maths Sup/Spé, PCSI.}} \textit{Lycée François 1\textsuperscript{er}, Le Havre.}  \dates{2003--2005} \\
+\smaller{Classes Préparatoires aux Grandes Écoles d'Ingénieurs.}
+
+
+
+\end{minipage}
+
+\end{document}
