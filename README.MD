@@ -4,9 +4,13 @@ Ce dépôt contient une version à jour de mon CV, décrivant mon parcours profe
 
 Vous pouvez télécharger ou consulter mon CV en format PDF via le lien suivant :
 
-[Consulter mon CV](./CV_HAUCHARD_JB_2024.pdf)
+[Consulter mon CV](./CV_HAUCHARD_JB_2024-2.pdf)
+
 
 Si vous souhaitez me contacter pour des opportunités professionnelles ou toute autre question, vous pouvez me joindre à l'adresse suivante :
 
 - **Email** : jbhauchard[at]gmail.com
 - **LinkedIn** : [linkedin.com/in/jbhauchard](https://www.linkedin.com/in/jbhauchard)
+
+
+Si vous préférez *vraiment* un CV d'une seule page, vous pouvez consulter celui-ci : [Resume résumé](./CV_HAUCHARD_JB_2024.pdf).
