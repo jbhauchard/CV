@@ -1,0 +1,327 @@
+% !TeX spellcheck = fr_FR
+% !TeX program = pdflatex
+% Author Jean-Baptiste Hauchard.
+
+\documentclass[11pt, a4paper]{article} 
+
+\usepackage[T1]{fontenc}     % We are using pdfLaTeX,
+\usepackage[utf8]{inputenc}  % hence this preparation
+\usepackage[british]{babel}  
+\usepackage[left = 0mm, right = 0mm, top = 0mm, bottom = 0mm]{geometry}
+\usepackage[stretch = 25, shrink = 25, tracking=false, letterspace=30]{microtype}  %% set tracking to false if using lualatex, which is needed for fontawsome
+\usepackage{graphicx}        % To insert pictures
+\usepackage{xcolor}          % To add colour to the document
+\usepackage{marvosym}        % Provides icons for the contact details
+\usepackage{enumitem}        % To redefine spacing in lists
+\setlist{parsep = 0pt, topsep = 0pt, partopsep = 1pt, itemsep = 1pt, leftmargin = 6mm}
+\usepackage{FiraSans}        % Font to be used
+\usepackage{twemojis}		% To add flags
+\usepackage{mathcomp}		% To add symbols
+\usepackage{fontawesome}		% needed for most symbols
+
+%\usepackage{atbegshi}		% http://ctan.org/pkg/atbegshi
+%\AtBeginDocument{\AtBeginShipoutNext{\AtBeginShipoutDiscard}}		% to get rid of first blank page
+
+\newfontfamily{\FAFR}{Font Awesome 6 Free Regular}
+\newfontfamily{\FAFS}{Font Awesome 6 Free Solid}
+\newfontfamily{\FAB}{Font Awesome 6 Brands Regular}
+\newfontfamily{\BNP}{BNPP Sans Condensed}
+
+\def\faEmail{{	\FAFR \symbol{"F0E0}}} 	% Email
+\def\faPhone{	\FAFS \symbol{"F095}} 		% Phone
+\def\faLinkedin{	\FAB \symbol{"F08C}} 	% Linkedin
+\def\faGithub{	\FAB \symbol{"F09B}} 		% Github
+\def\faploptest{	\FAFS \symbol{"F19C}} 		% TESTBROKENCHARS
+\def\faHouse{	\FAFR \symbol{"F0F7}} 		% House
+\def\faCar{	\FAFS \symbol{"F5DE}} 		% Car
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\definecolor{bandeau}{HTML}{007348} 
+\definecolor{altbandeau}{HTML}{007265} 
+\definecolor{link}{HTML}{003624}
+\definecolor{BNPgray}{HTML}{2D2926}
+
+%%%%%%% USER COMMAND DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%
+% These are the real workhorses of this template
+\newcommand{\dates}[1]{\hfill\mbox{\textbf{#1}}} % Bold stuff that doesn’t got broken into lines
+\newcommand{\is}{\par\vskip.5ex plus .4ex} % Item spacing
+%\newcommand{\smaller}[1]{{\small$\diamond$\ #1}}
+\newcommand{\smaller}[1]{{\small#1}}
+\newcommand{\headleft}[1]{\vspace*{1.5ex}\textsc{\textbf{#1}}\par%
+    \vspace*{-1ex}\hrulefill\par\vspace*{0.7ex}}
+\newcommand{\headright}[1]{\vspace*{2.5ex}\textsc{\Large\color{bandeau}#1}\par%
+     \vspace*{-1ex}{\color{bandeau}\hrulefill}\par}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[colorlinks = true, urlcolor = white, linkcolor = white]{hyperref}
+
+\begin{document}
+
+% Style definitions -- killing the unnecessary space and adding the skips explicitly
+\setlength{\topskip}{0pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\fboxsep}{0pt}
+\pagestyle{empty}
+\raggedbottom
+
+\begin{minipage}[t]{0.4\textwidth} %% Left column -- outer definition
+%  Left column -- top dark rectangle
+\colorbox{bandeau}{\begin{minipage}[t][5.5mm][t]{\textwidth}\null\hfill\null\end{minipage}}
+
+\vspace{-0.4ex} 			% Eliminates the small gap
+\colorbox{bandeau!100}{\color{white}  %% LEFT BOX
+\kern0.09\textwidth\relax% Left margin provided explicitly
+\begin{minipage}[t][293mm][t]{0.82\textwidth}
+%\raggedright
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%  PICTURE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace*{2.ex}	% Space before picture
+% Centering without extra vertical spacing
+\null\hfill\includegraphics[width=0.6\textwidth]{oval-transparent-small.png}\hfill\null
+\vspace*{6ex} 			% Space after the picture
+
+%%%%%%%%%%%%%%%%%%%%%%%%   NAME   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{\BNP\Huge\ Jean-Baptiste \textbf{\textsc{HAUCHARD}} \normalsize}
+\vspace*{0.5ex}			% Space after
+
+%%%%%%%%%%%%%%%%%%%%%%%%  SYNOPSIS  %%%%%%%%%%%%%%%%%%%%%%%%%%%% srsly that's a LOT of mboxes...
+\Large
+\headleft{\BNP }
+\large\textbf{Ingénieur en \mbox{informatique}} \mbox{passionné} par l'\textbf{intelligence \mbox{artificielle}, l'électronique} et les enjeux de \textbf{\mbox sécurité}. Avec une solide \mbox{expérience} en \textbf{\mbox{gestion} de \mbox{projets}}, en \mbox{création} d'\textbf{objets \mbox{connectés}} et en \mbox{infrastructures} \textbf{cloud}, je \mbox{combine} des \mbox{compétences} techniques \mbox{variées} et un goût \mbox{prononcé} pour le \textbf{\mbox prototypage} et la \textbf{\mbox transmission} des savoirs.
+\normalsize
+\vspace*{15.5ex} 			% Space after
+
+%%%%%%%%%%%%%%%%%%%%%%%%  PROFIL  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\Large
+\headleft{\BNP Profil}
+\large
+{\faploptest}\ {Ingénieur diplômé de l'ÉSIGÉLEC} \\[0.3ex]
+{\faCar}\ {Permis \textbf{B}}\\[0.3ex]
+\twemoji{flag: France}\ \textbf{ Français :} Langue maternelle \\[0.3ex]
+\twemoji{flag: United Kingdom}\ \textbf{ Anglais :} Courant (TOEIC 915) \\[0.3ex]
+\twemoji{flag: Spain}\ \textbf{ Espagnol :} Intermédiaire (B2)\\[0.3ex]
+\twemoji{flag: Romania}\ \textbf{ Roumain :} Conversationnel\\[0.3ex]
+%{\Mundus}\ Nationalité \textbf{Française} \\[0.3ex]
+{\faHouse}\ \ Domicilié en Île-de-France\\[0.3ex]
+\normalsize
+\vspace*{3.0ex} % Space after
+
+%%%%%%%%%%%%%%%%%%%%%%%%  CONTACT  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\Large
+\headleft{\BNP Contact}
+%\small % To fit more content
+\normalsize{\faEmail}\ {\ jbhauchard@gmail.com} \\[0.4ex]
+{\faPhone}\ \  +33\,6\,71\,24\,68\,68 \\[0.4ex]
+{\faLinkedin}\ \href{https://www.linkedin.com/in/jbhauchard}{\ linkedin.com/in/jbhauchard} \\[0.4ex]
+{\faGithub}\ \href{https://github.com/jbhauchard/CV}{\ github.com/jbhauchard/CV} \\[0.4ex]
+\normalsize
+\vspace*{1.0ex} % Space after
+
+\end{minipage}%
+\kern0.09\textwidth\relax	%%Right margin provided explicitly to stretch the colourbox
+}
+\end{minipage}% Right column
+\hskip2.5em% Left margin for the white area
+\begin{minipage}[t]{0.5\textwidth}
+\setlength{\parskip}{0.8ex}% Adds spaces between paragraphs; use \\ to add new lines without this space. Shrink this amount to fit more data vertically
+
+\vspace{0.5ex}				% Adjust here if first blank page appears for no reason
+
+%%%%%%%%%%%%%%%%%%%%%%%%  SKILLS  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\Large
+\headright{\BNP Compétences}
+\small
+\begin{itemize}
+\item \textbf{Intelligence artificielle} : ML, entraînement de chatbots à RNN (LSTM, Python, tensorflow, numpy), LLM (ollama/open-webui, RAG, redteaming), modèles de diffusion (ComfyUI, A1111, SVD, \mbox{AnimateDiff}, \mbox{entraînement} d'embeddings et LoRAs SD et Flux.1)
+\item \textbf{Administration systèmes} : GNU/Linux (Debian, Ubuntu), OSX, Shell \mbox{scripting} {\scriptsize\textit{(top 15\% de Linkedin)}}, vim, git, svn, MySQL, \mbox{PostgreSQL}, CouchDB, Redis, Apache2, NGINX, SSH, Wireshark
+\item \textbf{Hébergement web} : Cloud-computing (virtualisation, XEN, \mbox{VMWare}, GCP), troubleshooting (réseau, PHP, Python, ...), DNS
+\item \textbf{Électronique / IoT} : conception, programmation C (\textmu C), RF, PoE
+\item \textbf{Gestion de projets techniques} : \mbox{communication}, rigueur, \mbox{animation} d'équipe, capacité à résoudre des problèmes \mbox{complexes}, fort sens du service et de la satisfaction client
+\end{itemize} 
+\normalsize
+\vspace*{-2ex} % Space after the picture
+
+%%%%%%%%%%%%%%%%%%%%%%%%  EXPERIENCES  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\Large
+\headright{\BNP Expériences}
+\small
+\textbf{\textsc{Product Manager Polyvalent}} \textit{\href{https://www.opcore.com/}{\color{link}OPCORE}, Paris}  \dates{2023--2024} \\
+\smaller{$\diamond$\ \textit{Migration de la GTB interne des \mbox{datacenters} Scaleway} : \\
+Audit de configuration et \mbox{consolidation} du code (Django/Python, Celery, PostgreSQL, \mbox{Ansible}), \mbox{documentation} (Markdown, \mbox{Confluence}), maquettage (\mbox{VMWare}, Debian, SNMP, \mbox{ModBus}, CAN), métriques (\href{https://pue.dc5.scaleway.com/fr/}{\color{link}PUE}).}
+
+\is
+\textbf{\textsc{Responsable R\&D}} \textit{\href{https://www.viadirect.com/fr/}{\color{link}ViaDirect}} puis \textit{\href{https://www.kardham-digital.com/en/service/smart-workplace-2/}{\color{link}Kardham Digital}, Paris}  \dates{2016--2023} \\
+\smaller{\textit{$\diamond$\ Création d'une gamme d'objets connectés \href{http://web.archive.org/web/20200921050834/https://www.viadirect.com/fr/building}{\color{link}"VDBuilding"} (capteurs sans-fil et afficheurs PoE) associée à un moteur de gestion des réservations et à une \href{https://www.kardham-digital.com/en/ai-kardham-digital-launches-kd-forecast-a-tool-for-anticipating-workplace-visits/}{\color{link}IA \mbox{prédictive} "KD Forecast"}, pour l'optimisation du \mbox{remplissage} des espaces de \mbox{travail} et des jauges d'accueil.}}
+\begin{itemize}
+\item Sourcing et qualification de matériel et de composants.
+\item Pilotage du développement :
+	\begin{itemize}
+	\item d'un backend de Building Operating System,
+	\item d'une API de gestion des calendriers de Google et Microsoft,
+	\item d'applications (Android, Tizen) pour écrans d'accueil,
+	\item d'une application (iPhone) de réalité augmentée,
+	\item d'un boîtier d'alimentation électrique contrôlé par SMS.
+	\end{itemize}
+\item Gestion de projets (Product Owner) : avant-vente technique, \mbox{communication} \mbox{interne} et commerciale, suivi des grands comptes, supervision, recette et paramétrage des \mbox{installations}.
+\item Direction technique, gestion d'équipe et responsabilité du \mbox{support} et de l'exploitation.
+\item Gestion technique de l'acquisition de VDB par Kardham Digital.
+\item Ingénierie, Recherche et Développement : 
+	\begin{itemize}
+	\item Conception électronique et mécanique (FreeCad), langage C, micro-contrôleurs (\mbox{ATmega32U4}),
+	\item Technologies de détection de présence (Computer Vision, PIR), radiofréquences (Enocean, Lora, Sigfox, AT-SMS),
+	\item Administration systèmes et réseaux (Debian (embarqué, on-premise, OVH, GCP), PHP, Apache2, CouchDB, Ansible),
+	\item Industrialisation (soudure, usinage et \mbox{impression} 3D),
+	\item Fabrication artisanale de valises "démo-kits", de pièces mécaniques sur mesure pour installations complexes, de centaines d'objets signalétiques à LEDs RGB,
+	\item Implémentation de scanners de QRCodes, lecteurs NFC et imprimantes thermiques dans des bornes d'accueil...
+	\end{itemize}
+\end{itemize} 
+
+
+\is
+\textbf{\textsc{Conseil en email marketing}} \textit{\href{https://www.brevo.com/fr/}{\color{link}Sendinblue}, Paris}  \dates{2015} \\
+\smaller{$\diamond$\ \textit{Support et conseil client} :\\
+Analyse de contenu et \mbox{vérification} de la conformité légale et de la \mbox{qualité} des bases de contacts, orientation vers l'offre adaptée.\\
+\mbox{Automatisation} de la pré-qualification commerciale par réputation.}\\
+
+
+\hfill\textit{\tiny(Suite au verso)}
+
+
+
+\end{minipage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+
+\begin{minipage}[t]{0.4\textwidth} %% Left column -- outer definition
+%  Left column -- top dark rectangle
+\colorbox{bandeau}{\begin{minipage}[t][5.5mm][t]{\textwidth}\null\hfill\null\end{minipage}}
+
+\vspace{-0.4ex} % Eliminates the small gap
+\colorbox{bandeau!100}{\color{white}  %% LEFT BOX
+\kern0.09\textwidth\relax% Left margin provided explicitly
+\begin{minipage}[t][293mm][t]{0.82\textwidth}
+%\raggedright
+
+%%%%%%%%%%%%%%%%%%%%%%%%  NAME  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace*{2.5ex}
+{\BNP\Huge\ Jean-Baptiste \textbf{\textsc{HAUCHARD}} \normalsize}
+%\vspace*{-1.5ex}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%  HOBBIES  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace*{10.0ex} % Space BEFORE
+\Large
+\headleft{\BNP Hobbies}\small
+\ \\
+\textbf{\textit{\large\textbullet\ \raggedright Making \& Reverse Engineering :}}\\ \mbox{Dépannage} électronique (diagnostic de circuits, oscilloscope, soudure CMS, \mbox{reballing}...), réparation et restauration de jouets, CAO (FreeCAD), \mbox{impression} 3D, CNC,  découpe et gravure laser, moulage (plâtre/silicone/résine/latex) \\ 
+
+\textbf{\textit{\large\textbullet\ \raggedright IA générative :}}\\ Transformers à diffusion (Stable Diffusion 1.5 et XL, Flux.1, création de workflows \mbox{ComfyUI}, entraînement d'embeddings et LoRAs, génération de vidéos), Prompt Engineering et Red Teaming de LLM (ollama, open-webui) \\
+
+\textbf{\textit{\large\textbullet\ \raggedright Arts graphiques :}}\\ Estampe traditionnelle et \mbox{contemporaine}, photographie alternative (sténopé, \mbox{cyanotype}...), infographie (GIMP, \mbox{Photoshop}, Inkscape), membre \mbox{co-fondateur} d'un \mbox{collectif} d'artistes graveurs\\
+
+%\textbf{\textit{\large\textbullet\ \raggedright Chimie :}}\\ Cuisine et pâtisserie (formé par un Maître Artisan), fermentation (construction d'un alambic), panification (1\textsuperscript{er} confinement)\\
+%
+\textbf{\textit{\large\textbullet\ \raggedright Lecture :}}\\ SF, Informatique et Sciences\\
+\normalsize
+\vspace*{5ex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%  CONTACT  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace*{31.5ex} % Space BEFORE
+\Large
+\headleft{\BNP Contact}
+%\small % To fit more content
+\normalsize{\faEmail}\ {\ jbhauchard@gmail.com} \\[0.4ex]
+{\faPhone}\ \  +33\,6\,71\,24\,68\,68 \\[0.4ex]
+{\faLinkedin}\ \href{https://www.linkedin.com/in/jbhauchard}{\ linkedin.com/in/jbhauchard} \\[0.4ex]
+{\faGithub}\ \href{https://github.com/jbhauchard/CV}{\ github.com/jbhauchard/CV} \\[0.4ex]
+\normalsize
+\vspace*{1.0ex} % Space after
+
+
+
+\end{minipage}%
+\kern0.09\textwidth\relax%%Right margin provided explicitly to stretch the colourbox
+}
+\end{minipage}% Right column
+\hskip2.5em% Left margin for the white area
+\begin{minipage}[t]{0.5\textwidth}
+\setlength{\parskip}{0.8ex}% Adds spaces between paragraphs; use \\ to add new lines without this space. Shrink this amount to fit more data vertically
+
+\vspace{4ex}
+
+\is
+\textbf{\textsc{Chef de projets}} \textit{\href{http://web.archive.org/web/20150703174811/https://www.nbs-system.com/}{\color{link}NBS System}, Paris}  \dates{2014--2015} \\
+\smaller{$\diamond$\ \textit{Suivi du top-30 des clients Hosting haute \mbox{sécurité} (PCI-DSS)} :\\
+Avant-vente, \mbox{comitologie}, production et analyse de \mbox{rapports} KPI.}
+
+\is
+\textbf{\textsc{\small{Administrateur systèmes \& réseaux}}} \textit{\href{http://web.archive.org/web/20121201045509/http://www.nbs-system.com/}{\small\color{link}NBS System}, \small{Paris}}  \dates{2012--2013} \\
+\smaller{$\diamond$\ \textit{Support technique, hosting Cloud sécurisé hautes \mbox{performances} :}\\
+Customer Service (clients e-commerce, médias et luxe). Déploiement, scalabilité, réponse à incidents, astreintes, audit de performance applicative (Magento, Hybris, PrestaShop).}\\
+\smaller{$\diamond$\ \textit{Administration interne} : PABX, préparation de machines.}\\
+\smaller{$\diamond$\ \textit{Environnement technique : Debian, OTRS, Nagios, Centreon, SVN, git, \mbox{Fabric}, PHP, Tomcat/Java, Apache2, NGINX, MySQL, PostgreSQL, \mbox{Redis}, Memcached, Varnish, DNS, Load Balancing, \mbox{Reverse} Proxy, CDN, WAF, iptables, IPsec, OpenVPN, Postfix, GPG...}}\\
+\smaller{$\diamond$\ \textit{Participation au} \href{https://www.leslivresblancs.fr/livre/commerce-electronique/paiement-en-ligne/livre-blanc-des-connecteurs-de-paiement}{\color{link}"Livre blanc des connecteurs de paiement"}.}
+
+
+\is
+\textbf{\textsc{Enseignant}} \textit{Rectorat de Rouen, Normandie} \dates{2010--2011} \\
+\smaller{$\diamond$\ \textit{Enseignant vacataire (contractuel en collèges) en Technologie\ }:\\ 
+Cours d'électronique, domotique, CAO (SolidWorks), CNC (\mbox{charlyGRAAL}), développement durable, énergies, matériaux, Informatique (B2I). Fabrication d'une base de lancement, conception d'un module électro-mécanique de déploiement automatique de parachute et organisation d'un concours de conception de fusées hydropneumatiques.}
+
+\is
+\textbf{\textsc{Co-fondateur}} \textit{Créa-Sénior, Normandie} \dates{2009} \\
+\smaller{$\diamond$\ \textit{Création d'une entreprise de VPC} :\\
+Action \mbox{commerciale} et \mbox{marketing}. Publication (Photoshop) d'un catalogue de loisirs créatifs à destination d'adultes handicapés.}
+
+\is
+\textbf{\textsc{Ingénieur d'affaires}} \textit{\href{http://web.archive.org/web/20080929054837/http://www.invivoo.com/invivoo}{\color{link}INVIVOO}, Courbevoie}  \dates{2008} \\
+\smaller{$\diamond$\ \textit{Ingénierie d'affaire dans une ESN du \mbox{secteur} IT--Finance :}\\
+Prospection téléphonique, recrutement de \mbox{collaborateurs}, plaquette commerciale, négociation et suivi d’affaires.}
+
+\is
+\textbf{\textsc{R\&D micro-électronique}} \textit{\href{http://web.archive.org/web/20100121030449/http://www.electronic-equipment.net/mar}{\color{link}EEMI}, Le Havre}  \dates{2007--2008} \\
+\smaller{$\diamond$\ \textit{Projet scolaire d'ingénierie électronique embarquée} :\\
+Conception d'un produit de surveillance pour le transport fluvial et maritime \href{http://web.archive.org/web/20090719100946/http://www.foehn-technologies.fr/}{\color{link}"Foëhn 1"} :
+rédaction des spécifications, design du prototype (PSPICE, C, Delphi6). Communication projet (Photoshop).\\ \href{https://worldwide.espacenet.com/publicationDetails/originalDocument?CC=FR&DB=fr.espacenet.com&FT=D&KC=A1&NR=2913787A1&date=20080919&locale=fr_EP\#}{\color{link}Brevet FR2913787}, Prix de l’Innovation Logistique, label Oséo-Anvar.}
+
+\is
+\textbf{\textsc{Auditeur IT}} \textit{Inspection Académique, Caen}  \dates{2007} \\
+\smaller{$\diamond$\ \textit{Stage} : Inventaire automatisé du parc informatique (OCS-ng + GLPI, Fedora / RedHat), cartographie du réseau, audit des process.}
+\normalsize
+
+\vspace*{-1.5ex} % Space after
+
+%%%%%%%%%%%%%%%%%%%%%%%%  EDUCATION  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\Large
+\headright{\BNP Éducation}
+\small
+\textbf{\textsc{Formations à la sécurité informatique.}} \dates{2015, 2021, 2022} \\
+\smaller{Formations professionnelles, plusieurs organismes, environ 90 h.}
+
+\is
+\textbf{\textsc{Formations à la gestion de projet Agile.}} \dates{2018} \\
+\smaller{Formation "Product Owner", 30 h.}
+
+\is
+\textbf{\textsc{Ingénieur Informatique et Réseaux.}} \textit{\href{http://www.esigelec.fr/fr/presentation}{\color{link}ÉSIGÉLEC}, Rouen} \dates{2005--2008} \\
+\smaller{Diplôme d'Ingénieur généraliste.}
+
+\is
+\textbf{\textsc{Maths Sup/Spé, PCSI.}} \textit{Lycée François 1\textsuperscript{er}, Le Havre}  \dates{2003--2005} \\
+\smaller{Classes Préparatoires aux Grandes Écoles d'Ingénieurs.}
+
+\is
+\textbf{\textsc{\href{https://www.olympiades-chimie.fr/}{\color{link}Olympiades Nationales de la Chimie}}} \textit{Louis-le-Grand, Paris}  \dates{2003} \\
+\smaller{Classé 25\textsuperscript{ème} sur 2400 candidats au niveau national.}
+
+\end{minipage}
+
+
+\end{document}
