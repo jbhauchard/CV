@@ -11,6 +11,3 @@ Si vous souhaitez me contacter pour des opportunités professionnelles ou toute 
 
 - **Email** : jbhauchard[at]gmail.com
 - **LinkedIn** : [linkedin.com/in/jbhauchard](https://www.linkedin.com/in/jbhauchard)
-
-
-Si vous préférez *vraiment* un CV d'une seule page, vous pouvez consulter celui-ci : [Resume résumé](./CV_HAUCHARD_JB_2024.pdf).
